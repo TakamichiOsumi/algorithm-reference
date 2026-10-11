@@ -56,7 +56,7 @@ while B > 0:
     # Substract the maximum key from B.
     B -= consume
 
-    # Mltiply the key's value with 'val'.
+    # Multiply the key's value by 'val'.
     val = (val * dd[consume]) % DIV # ... [2]
 
 print(val) # ... [3]
