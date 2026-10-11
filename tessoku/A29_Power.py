@@ -1,10 +1,17 @@
 #!/usr/bin/env python3
 
+# Key Takeaways:
+#
+# (1) For '+', '-' and '*', timing to calculate '%' doesn't affect
+#     the calculation result like [1], [2] and [3].
+#
+# (2) The next key for 'dd' is 'cur_key + cur_key' as described in [4].
+#     This is because the dictionary key is the number of total multiplied
+#     times of A, the exponent of A. Thus, the key is calculated by '+'.
+
 from sortedcontainers import SortedList
 from sortedcontainers import SortedDict
 from collections import defaultdict
-
-import math
 
 debug = True # switch
 def p(*var):
@@ -27,10 +34,10 @@ dd[1] = A
 prev_key = 1
 cur_key = 2
 while True:
-    dd[cur_key] = (dd[prev_key] * dd[prev_key]) % DIV
+    dd[cur_key] = (dd[prev_key] * dd[prev_key]) % DIV # ... [1]
     p("cur_key", cur_key, "=>", dd[cur_key])
     prev_key = cur_key
-    cur_key = cur_key + cur_key
+    cur_key = cur_key + cur_key # ... [4]
     if cur_key > B:
         p("break with cond=", cur_key, ">", B)
         break
@@ -44,15 +51,12 @@ while B > 0:
     # Find the maximum key value under (left) B from 'dd'.
     left_keys = [b for b in dict_keys if b <= B]
 
-    max_value = max(left_keys)
-    consume = max_value
-    
+    consume = max(left_keys)
     p("B consumption=", consume ,", multiply", dd[consume])
-
     # Substract the maximum key from B.
     B -= consume
 
     # Mltiply the key's value with 'val'.
-    val = (val * dd[consume]) % DIV
+    val = (val * dd[consume]) % DIV # ... [2]
 
-print(val)
+print(val) # ... [3]
