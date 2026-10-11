@@ -12,5 +12,3 @@ for i in range(N):
         val -= int(A)
     val %= 10000
     print(val)
-    
-
