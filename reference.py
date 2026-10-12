@@ -281,7 +281,9 @@ def bit_brute_force(N, mat):
     comb = []
     for i in range(2 ** N):
         ary = []
+        # print("i=", i)
         for j in range(N):
+            # print("\tj=", j, " ... and i >> j =", i >> j, ": (i >> j) & 1 =>", (i >> j) & 1)
             if ((i >> j) & 1):
                 ary.append(mat[j])
         comb.append(ary)
