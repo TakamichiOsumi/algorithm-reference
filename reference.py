@@ -266,10 +266,16 @@ print("runLengthEncode=", runLengthEncode("foo", False)) # runLengthEncode= f1o2
 #
 # The internal is to iterate all values from 0 to 2 ** N - 1
 # and checks if binary representation of each value has 1
-# on each digits like 3 = '0b11' leads to [1, 2], when N == 2.
-# (In other words, 3 consists of 2 ** 0 + 2 ** 1.)
-# Then, [1, 2] are added to the returned 'comb' as a one single
-# element in the array, with other arrays for iterated 0, 1, 2.
+# on each digits like 3 = '0b11' leads to [0, 1], when N == 2.
+#
+# The core part is to check each binary digits by '(i >> j) & 1'
+# and append 'j' to the 'ary'.
+#
+# (3 >> 0) & 1 => append 0 to 'ary', the rightmost digit.
+# (3 >> 1) & 1 => append 1 to 'ary', the 2nd digit from the rightmost.
+#
+# Then, [0, 1] are added to the returned 'comb' as a one single
+# element in the array, with other arrays for iterated i=0, 1, 2.
 # ------------------------------------
 def bit_brute_force(N, mat):
     comb = []
