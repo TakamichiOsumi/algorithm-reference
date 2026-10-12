@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
-from sortedcontainers import SortedDict
-from sortedcontainers import SortedList
+# Key Takeaways:
+#
+# The restriction of this problem is 1 <= N <= 20.
+# Thus, bit brute force can be applied.
 
 debug = True # switch
 def p(*var):
