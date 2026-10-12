@@ -261,6 +261,15 @@ print("runLengthEncode=", runLengthEncode("foo", False)) # runLengthEncode= f1o2
 
 # ------------------------------------
 # Bit Brute Force
+#
+# List up 2**N patterns for N argument.
+#
+# The internal is to iterate all values from 0 to 2 ** N - 1
+# and checks if binary representation of each value has 1
+# on each digits like 3 = '0b11' leads to [1, 2], when N == 2.
+# (In other words, 3 consists of 2 ** 0 + 2 ** 1.)
+# Then, [1, 2] are added to the returned 'comb' as a one single
+# element in the array, with other arrays for iterated 0, 1, 2.
 # ------------------------------------
 def bit_brute_force(N, mat):
     comb = []
