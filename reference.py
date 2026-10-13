@@ -170,6 +170,21 @@ print("divisors of 36 (include_edges = True, include_pair = False)=",
 
 
 # ------------------------------------
+# Prime Check
+# ------------------------------------
+def is_prime(val):
+    i = 2
+    while True:
+        if i * i > val:
+            break
+        if val % i == 0:
+            return False
+        i += 1
+        if i == val:
+            break
+    return True
+
+# ------------------------------------
 # Prime Factorization
 # ------------------------------------
 def prime_factorization(orig_N):
