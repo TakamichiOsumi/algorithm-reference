@@ -31,6 +31,15 @@ reference of the offline library manuals.
 >>> help(string)
 ```
 
+### Run a script in the same current directory
+
+```
+$ `git rev-parse --show-toplevel`/execute_latest.sh
+```
+
+This enables the same interface of script execution wherever the
+current directory is.
+
 ## Notes
 
 Tested on only Mac OS X.
