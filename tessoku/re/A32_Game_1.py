@@ -1,34 +1,18 @@
 #!/usr/bin/env python3
 
-from sortedcontainers import SortedDict
-# keys(), values(), items(), bisect_left(), bisect_right(), etc
-from sortedcontainers import SortedList
-# add(), bisect_left(), bisect_right(), count(), extend(), index(), insert(index, value), etc
-from sortedcontainers import SortedSet
-# add(), remove(), etc
-from collections import defaultdict
-# dd = defaultdict(list)
-from collections import deque
-# append(), appendleft(), extend(), extendleft(), index(), pop(), popleft(), etc
-from collections import Counter
-# c = Counter('abcdeabc') # ''.join(sorted(c.elements()))) == 'aabbccde'
-import itertools
-# itertools.permutations(range(A, B)), itertools.combinations(range(A, B), C)
-# itertools.product(range(A, B), range(C, D)), itertools.groupby(list(S))
-# itertools.accumulate(A), etc
-import math
-# math.pow()
-import numpy
-import re
-# for m in re.finditer(r"(aa+)|(bb+)|(cc+)", s):
-
-from atcoder.segtree import SegTree
-# seg = SegTree(max, -(10**9), [2, 3, 5, 1, 6]) # set(), prod(), etc
-from atcoder.dsu import DSU
-# uf = DSU(int value); # groups(), leader(), merge(), same(), size()
-
-import sys
-# sys.setrecursionlimit(10 ** 6) # for recursion.
+# This problem can be regarded as DP problem, because "First" win or lose
+# can be decided by the number of left stones from 0 to N.
+#
+# The "First" wins at 'A'th and 'B'th index, which are marked as True around [1].
+#
+# The iteration at [2] should include 0 to N, all sequential numbers until N.
+# I *mistakenly* chose the range(max(A, B) + 1, N + 1), but this can't correctly handle
+# the range within the A and B. Imagine the case N= 20, A= 3, B=10. If the loop for [2]
+# starts with max(3, 10) + 1 = 11, then, the True/False checks of the internal range
+# between 4 to 9 are ignored.
+#
+# Along with the above logic which starts iteration from 0, 'i - A >= 0' and 'i - B >= 0'
+# are required as [3].
 
 debug = True # switch
 def p(*var):
@@ -42,15 +26,15 @@ def p(*var):
             print("DEBUG:", *var)
 
 N, A, B = map(int, input().split())
-dp = [False] * (N + 1)
+dp = [False] * (N + 1) # Can create this size, since N <= 10 ** 5.
 
 for i in range(max(A, B) + 1):
     if i == A or i == B:
-        dp[i] = True
+        dp[i] = True # ....[1]
 p("prepared=", dp)
 
-for i in range(N + 1):
-    # Checks for both 'i - A >= 0' and 'i - B >= 0' are must.
+for i in range(N + 1): # ...[2]
+    # Must check for both 'i - A >= 0' and 'i - B >= 0' ...[3]
     if (i - A >= 0 and dp[i - A] is False) or (i - B >= 0 and dp[i - B] is False):
         dp[i] = True
 
