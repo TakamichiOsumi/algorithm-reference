@@ -16,7 +16,8 @@ import itertools
 # itertools.permutations(range(A, B)), itertools.combinations(range(A, B), C)
 # itertools.product(range(A, B), range(C, D)), itertools.groupby(list(S))
 # itertools.accumulate(A), etc
-import math # math.pow()
+import math
+# math.pow()
 import numpy
 import re
 # for m in re.finditer(r"(aa+)|(bb+)|(cc+)", s):
