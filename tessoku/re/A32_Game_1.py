@@ -12,7 +12,8 @@
 # between 4 to 9 are ignored.
 #
 # Along with the above logic which starts iteration from 0, 'i - A >= 0' and 'i - B >= 0'
-# are required as [3].
+# are required as [3]. Otherwise, the initial iterations like i = 0 lead to minus 'i - A'
+# and minus 'i - B' and wrong answers.
 
 debug = True # switch
 def p(*var):
