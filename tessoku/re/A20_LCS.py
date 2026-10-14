@@ -1,17 +1,18 @@
 #!/usr/bin/env python3
 
-from sortedcontainers import SortedList
-from sortedcontainers import SortedSet
-from collections import defaultdict
-from collections import deque
-from collections import Counter
-import itertools
-import math
-import numpy
-import re
-from atcoder.segtree import SegTree
-from atcoder.dsu import DSU
-import sys
+
+# Finding a longest common substring between two strings can be
+# converted to a problem of DP with a matrix where each cell gets
+# count up when finding a common character during iteration.
+#
+# As [1] describes, S[i - 1] and T[j - 1] point to 'index - 1' character
+# for both S and T. Always compare the index - 1 characters between
+# S and T, to create 0 values cells for i==0 and j==0.
+#
+# The [2] condition picks up bigger value from either the upper cell
+# or the left cell, when S[i - 1] != T[j - 1].
+#
+# Allocate enough memory for the matrix in [3].
 
 debug = True # switch
 def p(*var):
@@ -43,7 +44,5 @@ for i in range(len(S) + 1):
             edge_counts[i][j] = edge_counts[i - 1][j]
         elif j - 1 >= 0:
             edge_counts[i][j] = edge_counts[i][j - 1]
-        else:
-            edge_counts[i][j] = 0
 
 print(edge_counts[len(S)][len(T)])
