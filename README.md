@@ -31,7 +31,7 @@ reference of the offline library manuals.
 >>> help(string)
 ```
 
-## Run a script in the same current directory
+## Run the last edited script in the current directory
 
 ```
 $ `git rev-parse --show-toplevel`/execute_latest.sh
