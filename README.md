@@ -101,7 +101,7 @@ Tested on only Mac OS X.
     This approach can be applied to [Range Set Insertion Query][28] too.
 
 - Faster Power (math.power()) Calculation
-  - [A29 - Power][31]
+  - [A29 - Power](./tessoku/A29_Power.py)
 
 - Cycle Graph
   - [Cycle Graph][19]
@@ -136,7 +136,6 @@ Tested on only Mac OS X.
 [28]:D/Range_Set_Insertion_Query.py
 [29]:tessoku/re/A18_Subset_Sum.py
 [30]:tessoku/A19_Knapsack_1.py
-[31]:tessoku/A29_Power.py
 
 
 ## Minor insights for competitve programming
