@@ -35,7 +35,7 @@ def p(*var):
     global debug
     if debug:
         if len(var) == 1 and type(var[0]) == type([]):
-            print("DEBUG : --argument array--")
+            print("DEBUG : --dump array--")
             for i in range(len(var[0])):
                 print(f"\t{i}:{var[0][i]}")
         else:
