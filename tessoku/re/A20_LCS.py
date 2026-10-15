@@ -26,8 +26,8 @@ def p(*var):
 S = input()
 T = input()
 
-edge_counts = [ [0] * (len(T) + 1) # This is row. The size should be T.
-                for _ in range(len(S) + 1) ] # This is column. The size should be S.
+edge_counts = [ [0] * (len(T) + 1) # This is row. The end index should be T.
+                for _ in range(len(S) + 1) ] # This is column. The end index should be S.
 
 for i in range(len(S) + 1):
     for j in range(len(T) + 1):
