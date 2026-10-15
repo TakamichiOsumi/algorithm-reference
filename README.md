@@ -5,7 +5,7 @@ My personal notes about algorithms during self-study.
 ## Set up the environment
 
 ```
-$ git clone https://github.com/TakamichiOsumi/python-reference.git
+$ git clone https://github.com/TakamichiOsumi/algorithm-reference.git
 $ cd python-reference
 $ python3 -m venv venv
 $ source venv/bin/activate
