@@ -6,7 +6,7 @@ My personal notes about algorithms during self-study.
 
 ```
 $ git clone https://github.com/TakamichiOsumi/algorithm-reference.git
-$ cd python-reference
+$ cd algorithm-reference
 $ python3 -m venv venv
 $ source venv/bin/activate
 (venv) $ pip install -r requirements.txt
