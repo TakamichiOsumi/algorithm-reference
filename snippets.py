@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Refer to https://github.com/TakamichiOsumi/algorithm-reference.
+Referred to https://github.com/TakamichiOsumi/algorithm-reference.
 """
 
 from sortedcontainers import SortedDict
