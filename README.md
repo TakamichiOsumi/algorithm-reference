@@ -1,4 +1,4 @@
-# python-reference
+# algorithm-reference
 
 My personal notes about algorithms during self-study.
 
