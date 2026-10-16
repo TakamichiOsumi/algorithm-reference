@@ -3,3 +3,4 @@ sortedcontainers
 pyflakes
 pylint
 ac-library-python
+numpy
