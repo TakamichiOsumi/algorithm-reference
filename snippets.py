@@ -46,7 +46,7 @@ def p(*var):
             print("DEBUG:", *var)
 
 if __name__ == "__main__":
-    p("Solve problem.")
+    pass
 else:
     # Leave below codes for quick reference.
     N, M = map(int, input().split())
