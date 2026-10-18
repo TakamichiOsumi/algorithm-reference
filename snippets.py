@@ -45,23 +45,25 @@ def p(*var):
         else:
             print("DEBUG:", *var)
 
-N, M = map(int, input().split())
-A = list(map(int, input().split()))
-S = input()
-N = int(input())
-X_Y = [ list(map(int, input().split())) for _ in range(N) ]
+if __name__ == "__main__":
+    p("Solve problem.")
+else:
+    # Leave below codes for quick reference.
+    N, M = map(int, input().split())
+    A = list(map(int, input().split()))
+    S = input()
+    N = int(input())
+    # Ascending order by each 0th element.
+    X_Y = [ list(map(int, input().split())) for _ in range(N) ]
+    sorted_X_Y = sorted(X_Y, reverse = False, key = lambda x : x[0])
 
-# # Ascending order by each 0th element.
-# sorted_X_Y = sorted(X_Y, reverse = False, key = lambda x : x[0])
-# strings = [ input() for _ in range(N) ]
-# chars  = list(input())
-# Q = int(input())
-# for i in range(Q):
-#     s = input()
-#     if s[0] == '1':
-#         # query = 1
-#         q, x, y = map(int, s.split())
-#     else:
-#         # other cases like for query = 2.
-#         q, k = map(int, s.split())
-
+    strings = [ input() for _ in range(N) ]
+    chars  = list(input())
+    # Handle query = 1 and 2.
+    # Q = int(input())
+    # for i in range(Q):
+    #     s = input()
+    #     if s[0] == '1':
+    #         q, x, y = map(int, s.split())
+    #     else:
+    #         q, k = map(int, s.split())
