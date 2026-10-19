@@ -19,7 +19,7 @@ import math
 # math.pow()
 import numpy
 import re
-# for m in re.finditer(r"(aa+)|(bb+)|(cc+)", s):
+# for m in re.finditer(r"(aa+)|(bb+)|(cc+)", S):
 #     print("Index=", m.start(0), "&", m.end(0), ", Sub string : ", S[ m.start(0) : m.end(0) ])
 
 # from atcoder.segtree import SegTree
