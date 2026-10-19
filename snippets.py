@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
 
-"""
-Referred to https://github.com/TakamichiOsumi/algorithm-reference.
-"""
-
 from sortedcontainers import SortedDict
 # keys(), values(), items(), bisect_left(), bisect_right(), etc
 from sortedcontainers import SortedList
