@@ -1,8 +1,11 @@
 #!/usr/bin/env python3
 
+# This problem can be solved by an idea that
+# appending 'R' or 'B' to edges of one sequence of 'RRR' or 'BBB'.
+# Therefore, finding one sequence of either 'RRR' and 'BBB' is confident
+# enough to judge the result.
+
 import re
-# for m in re.finditer(r"(aa+)|(bb+)|(cc+)", s):
-#     print("Index=", m.start(0), "&", m.end(0), ", Sub string : ", S[ m.start(0) : m.end(0) ])
 
 debug = True # switch
 def p(*var):
