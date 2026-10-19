@@ -12,10 +12,9 @@ from collections import deque
 # append(), appendleft(), extend(), extendleft(), index(), pop(), popleft(), etc
 from collections import Counter
 # c = Counter('abcdeabc') # ''.join(sorted(c.elements()))) == 'aabbccde'
-import itertools
-# itertools.permutations(range(A, B)), itertools.combinations(range(A, B), C)
-# itertools.product(range(A, B), range(C, D)), itertools.groupby(list(S))
-# itertools.accumulate(A), etc
+from itertools import permutations, combinations, product, groupby, accumulate
+# permutations(range(A, B)), combinations(range(A, B), C)
+# product(range(A, B), range(C, D)), groupby(list(S)), accumulate(A), etc
 import math
 # math.pow()
 import numpy
@@ -56,7 +55,7 @@ else:
 
     strings = [ input() for _ in range(N) ]
     chars  = list(input())
-    # Handle query = 1 and 2.
+
     # Q = int(input())
     # for i in range(Q):
     #     s = input()
