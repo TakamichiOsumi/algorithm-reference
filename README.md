@@ -104,6 +104,10 @@ Tested on only Mac OS X.
 - Faster Power (math.power()) Calculation
   - [A29 - Power](tessoku/A29_Power.py)
 
+- Greedy Algorithm
+  - [A39 - Interval Scheduling Problem](tessoku/re/A39_Interval_Scheduling_Problem.py)
+    As the name indicates, this is a problem for interval scheduling.
+
 - Cycle Graph
   - [Cycle Graph](re/C/Cycle_Graph.py)
 
