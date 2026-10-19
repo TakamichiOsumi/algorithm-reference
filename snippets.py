@@ -21,10 +21,11 @@ import math
 import numpy
 import re
 # for m in re.finditer(r"(aa+)|(bb+)|(cc+)", s):
+#     print("Index=", m.start(0), "&", m.end(0), ", Sub string : ", S[ m.start(0) : m.end(0) ])
 
-from atcoder.segtree import SegTree
+# from atcoder.segtree import SegTree
 # seg = SegTree(max, -(10**9), [2, 3, 5, 1, 6]) # set(), prod(), etc
-from atcoder.dsu import DSU
+# from atcoder.dsu import DSU
 # uf = DSU(int value); # groups(), leader(), merge(), same(), size()
 
 import sys
