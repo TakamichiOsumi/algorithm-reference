@@ -32,7 +32,6 @@ import sys
 
 debug = True # switch
 def p(*var):
-    global debug
     if debug:
         if len(var) == 1 and type(var[0]) == type([]):
             print("DEBUG : --dump array--")
