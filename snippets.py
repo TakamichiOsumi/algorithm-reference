@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 from sortedcontainers import SortedDict # keys, values, items, bisect_left, bisect_right
-from sortedcontainers import SortedList # add, bisect_left, bisect_right, count, extend, index, insert(index, value)
+from sortedcontainers import SortedList # add, bisect_left, bisect_right, count, extend, index, insert(index, value). Note 'del sl[index]' is O(log(n)).
 from sortedcontainers import SortedSet # add, remove
 from collections import defaultdict # dd = defaultdict(list)
 from collections import deque # append, appendleft, extend, extendleft, index, pop, popleft
