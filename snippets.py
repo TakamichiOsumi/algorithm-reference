@@ -43,11 +43,13 @@ def p(*var):
 if __name__ == "__main__":
     N, M = map(int, input().split())
     X_Y = [ list(map(int, input().split())) for _ in range(N) ]
+    pass
 else:
     # Leave below codes for quick reference.
     A = list(map(int, input().split()))
     S = input()
     N = int(input())
+
     # Ascending order by each 0th element.
     # sorted_X_Y = sorted(X_Y, reverse = False, key = lambda x : x[0])
 
