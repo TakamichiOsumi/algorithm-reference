@@ -41,16 +41,15 @@ def p(*var):
             print("DEBUG:", *var)
 
 if __name__ == "__main__":
-    pass
+    N, M = map(int, input().split())
+    X_Y = [ list(map(int, input().split())) for _ in range(N) ]
 else:
     # Leave below codes for quick reference.
-    N, M = map(int, input().split())
     A = list(map(int, input().split()))
     S = input()
     N = int(input())
     # Ascending order by each 0th element.
-    X_Y = [ list(map(int, input().split())) for _ in range(N) ]
-    sorted_X_Y = sorted(X_Y, reverse = False, key = lambda x : x[0])
+    # sorted_X_Y = sorted(X_Y, reverse = False, key = lambda x : x[0])
 
     strings = [ input() for _ in range(N) ]
     chars  = list(input())
